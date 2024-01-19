@@ -12,27 +12,30 @@ namespace EmployeeWage
         {
             Random random = new Random();
             int isPresent = random.Next(0, 3);
-            if (isPresent == 0)
+            switch (isPresent)
             {
-                Console.WriteLine("Employee is Absent");
-            }
-            else if (isPresent == 1)
-            {
-                Console.WriteLine("Employee is working Full Time");
-                Console.WriteLine("Enter employee wage: ");
-                string wage = Console.ReadLine();
-                Console.WriteLine("Enter total hours");
-                string hours = Console.ReadLine();
-                Console.WriteLine(Convert.ToInt32(wage) * Convert.ToInt32(hours));
-            }
-            else
-            {
-                Console.WriteLine("Employee is working Part time");
-                Console.WriteLine("Enter employee wage: ");
-                string wageparttime = Console.ReadLine();
-                Console.WriteLine("Enter total hours");
-                string hoursparttime = Console.ReadLine();
-                Console.WriteLine(Convert.ToInt32(wageparttime) * Convert.ToInt32(hoursparttime));
+                case 0:
+                    Console.WriteLine("Employee is Absent");
+                    break;
+                case 1:
+                    Console.WriteLine("Employee is working Full Time");
+                    Console.WriteLine("Enter employee wage: ");
+                    string wage = Console.ReadLine();
+                    Console.WriteLine("Enter total hours");
+                    string hours = Console.ReadLine();
+                    Console.WriteLine(Convert.ToInt32(wage) * Convert.ToInt32(hours));
+                    break;
+                case 2:
+                    Console.WriteLine("Employee is working Part time");
+                    Console.WriteLine("Enter employee wage: ");
+                    string wageparttime = Console.ReadLine();
+                    Console.WriteLine("Enter total hours");
+                    string hoursparttime = Console.ReadLine();
+                    Console.WriteLine(Convert.ToInt32(wageparttime) * Convert.ToInt32(hoursparttime));
+                    break;
+                default:
+                    Console.WriteLine("Invalid case");
+                    break;
             }
             Console.ReadLine();
         }
