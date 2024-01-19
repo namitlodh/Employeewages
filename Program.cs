@@ -10,16 +10,18 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int a = rnd.Next(0, 2);
-            if (a == 0)
+            int totalNoOfDays = 20;
+            int totalNoOfHrs = 100;
+            int wageRate = 20;
+            int daycount = 0;
+            int hrscount = 0;
+
+            while (daycount <= totalNoOfDays && hrscount <= totalNoOfHrs)
             {
-                Console.WriteLine("Employee is Absent");
+                daycount += 1;
+                hrscount += 8;
             }
-            else
-            {
-                Console.WriteLine("Employee is Present");
-            }
+            Console.WriteLine($"Your salary at end of day {daycount} is " + (Convert.ToInt32(hrscount * wageRate)));
             Console.ReadLine();
         }
     }
