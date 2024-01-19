@@ -10,33 +10,14 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            int isPresent = random.Next(0, 3);
-            switch (isPresent)
-            {
-                case 0:
-                    Console.WriteLine("Employee is Absent");
-                    break;
-                case 1:
-                    Console.WriteLine("Employee is working Full Time");
-                    Console.WriteLine("Enter employee wage: ");
-                    string wage = Console.ReadLine();
-                    Console.WriteLine("Enter total hours");
-                    string hours = Console.ReadLine();
-                    Console.WriteLine(Convert.ToInt32(wage) * Convert.ToInt32(hours));
-                    break;
-                case 2:
-                    Console.WriteLine("Employee is working Part time");
-                    Console.WriteLine("Enter employee wage: ");
-                    string wageparttime = Console.ReadLine();
-                    Console.WriteLine("Enter total hours");
-                    string hoursparttime = Console.ReadLine();
-                    Console.WriteLine(Convert.ToInt32(wageparttime) * Convert.ToInt32(hoursparttime));
-                    break;
-                default:
-                    Console.WriteLine("Invalid case");
-                    break;
-            }
+            Console.WriteLine("Enter the wages per hour: ");
+            string wages = Console.ReadLine();
+            Console.WriteLine("Enter total hours: ");
+            string hours = Console.ReadLine();
+            Console.WriteLine("Enter total days worked in per month: ");
+            string days = Console.ReadLine();
+            Console.WriteLine("Total wage in a month is: ");
+            Console.WriteLine((Convert.ToInt32(wages) * Convert.ToInt32(hours)) * Convert.ToInt32(days));
             Console.ReadLine();
         }
     }
