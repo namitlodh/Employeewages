@@ -10,16 +10,11 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int a = rnd.Next(0, 2);
-            if (a == 0)
-            {
-                Console.WriteLine("Employee is Absent");
-            }
-            else
-            {
-                Console.WriteLine("Employee is Present");
-            }
+            Console.WriteLine("Enter wage per hour : ");
+            String wageperhour = Console.ReadLine();
+            Console.WriteLine("Enter total hours worked : ");
+            String hours = Console.ReadLine();
+            Console.WriteLine(Convert.ToInt32(wageperhour) * Convert.ToInt32(hours));
             Console.ReadLine();
         }
     }
