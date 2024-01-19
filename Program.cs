@@ -10,14 +10,18 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the wages per hour: ");
-            string wages = Console.ReadLine();
-            Console.WriteLine("Enter total hours: ");
-            string hours = Console.ReadLine();
-            Console.WriteLine("Enter total days worked in per month: ");
-            string days = Console.ReadLine();
-            Console.WriteLine("Total wage in a month is: ");
-            Console.WriteLine((Convert.ToInt32(wages) * Convert.ToInt32(hours)) * Convert.ToInt32(days));
+            int totalNoOfDays = 20;
+            int totalNoOfHrs = 100;
+            int wageRate = 20;
+            int daycount = 0;
+            int hrscount = 0;
+
+            while (daycount <= totalNoOfDays && hrscount <= totalNoOfHrs)
+            {
+                daycount += 1;
+                hrscount += 8;
+            }
+            Console.WriteLine($"Your salary at end of day {daycount} is " + (Convert.ToInt32(hrscount * wageRate)));
             Console.ReadLine();
         }
     }
